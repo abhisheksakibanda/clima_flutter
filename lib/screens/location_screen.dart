@@ -82,7 +82,7 @@ class _LocationScreenState extends State<LocationScreen> {
                           builder: (context) => CityScreen(),
                         ),
                       );
-                      if (typedCity != '') {
+                      if (typedCity != '' || typedCity != null) {
                         var weatherData =
                             await weather.getCityWeather(typedCity);
                         updateUI(weatherData);
